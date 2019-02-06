@@ -1,17 +1,18 @@
 package handler
 
 import (
-	"io"
+	"log"
 	"net/http"
 
 	"github.com/gmidorii/book/server/form"
+	"github.com/pkg/errors"
 )
 
-func BookList(w http.ResponseWriter, r *http.Request) {
-	_, err := form.ParseBooks(r.Form)
+func Books(w http.ResponseWriter, r *http.Request) {
+	_, err := form.ParseBooks(r.URL.Query())
 	if err != nil {
-		w.WriteHeader(http.StatusBadRequest)
-		io.WriteString(w, err.Error())
+		log.Println(err)
+		errorMessage(w, http.StatusBadRequest, errors.Cause(err).Error())
 		return
 	}
 }

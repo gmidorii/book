@@ -16,12 +16,12 @@ func validate(i interface{}) error {
 			return errors.Wrap(err, "invalidation error")
 		}
 
-		var s string
+		var message string
 		for _, err := range err.(validator.ValidationErrors) {
-			s = fmt.Sprintf("%v tag: %v, field: %v, param: %v | ", s, err.Tag(), err.Field(), err.Param())
+			message = fmt.Sprintf("%v tag: %v, field: %v, param: %v | ", message, err.Tag(), err.Field(), err.Param())
 		}
 
-		return errors.Wrap(err, s)
+		return errors.WithMessage(err, message)
 	}
 	return nil
 }

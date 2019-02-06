@@ -5,9 +5,11 @@ import (
 	"log"
 	"net/http"
 	"os"
+	"time"
 
 	"github.com/gmidorii/book/server/handler"
 	"github.com/go-chi/chi"
+	"github.com/go-chi/chi/middleware"
 )
 
 const (
@@ -17,7 +19,11 @@ const (
 
 func serve() error {
 	r := chi.NewRouter()
+	r.Use(middleware.Logger)
+	r.Use(middleware.Timeout(30 * time.Second))
+
 	r.Get("/ping", handler.Ping)
+	r.Get("/books", handler.Books)
 
 	p := os.Getenv(portEnv)
 	if p == "" {
