@@ -1,4 +1,5 @@
 github.com/gmidorii/book v0.0.0-20190206041103-f0b074cfb4f1 h1:OOmqX3yWqUE1+48Dvvf3ujgQYZHB3NtylVtR0VIWKEk=
+github.com/gmidorii/book v0.0.0-20190207144151-91827646d664 h1:sn/tvoLEL5ZbZRhGTDfclbntw1Cw6oWsqU7MuLkGhZw=
 github.com/go-chi/chi v4.0.1+incompatible h1:RSRC5qmFPtO90t7pTL0DBMNpZFsb/sHF3RXVlDgFisA=
 github.com/go-chi/chi v4.0.1+incompatible/go.mod h1:eB3wogJHnLi3x/kFX2A+IbTBlXxmMeXJVKy9tTv1XzQ=
 github.com/go-playground/locales v0.12.1 h1:2FITxuFt/xuCNP1Acdhv62OzaCiviiE4kotfhkmOqEc=
