@@ -1,8 +1,12 @@
 BIN=bs
 APP_PORT=8088
 AUTO_PORT=3333
+WIRE_BIN=wire
 
-build:
+wire:
+	$(WIRE_BIN) github.com/gmidorii/book/server/provider
+
+build: wire
 	go build -o $(BIN)
 
 run: build
