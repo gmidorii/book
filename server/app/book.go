@@ -17,7 +17,7 @@ func NewBook(br domain.BookRepository) Book {
 }
 
 func (b Book) FetchList(form form.Books) (response.Books, error) {
-	books := br.GetList(form.Offset, form.Limit)
+	books := b.br.GetList(form.Offset, form.Limit)
 
 	res := make([]response.Book, len(books))
 	for i, b := range books {
