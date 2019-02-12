@@ -19,3 +19,4 @@ bs
 server
 wire_gen.go
 
+manifest/secret
