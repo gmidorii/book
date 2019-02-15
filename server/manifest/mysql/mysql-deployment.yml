@@ -4,9 +4,9 @@ metadata:
   name: mysql
 spec:
   selector:
-    app:  mysql
+    app: mysql
   ports:
-  - port:  3306
+    - port: 3306
   clusterIP: None
 ---
 apiVersion: apps/v1
@@ -25,11 +25,11 @@ spec:
         app: mysql
     spec:
       containers:
-      - image:  mysql:5.6
-        name:  mysql
-        env:
-          - name:  MYSQL_ROOT_PASSWORD
-            valueFrom:  
-              secretKeyRef:
-                name: local-secret
-                key: mysql.password
+        - image: mysql:5.6
+          name: mysql
+          env:
+            - name: MYSQL_ROOT_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: booksecret
+                  key: mysql.password
