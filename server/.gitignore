@@ -20,3 +20,4 @@ server
 wire_gen.go
 
 manifest/secret
+book.config.toml
