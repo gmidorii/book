@@ -1,6 +1,6 @@
 //+build wireinject
 
-package ingector
+package injector
 
 import (
 	"github.com/google/wire"

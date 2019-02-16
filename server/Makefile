@@ -4,7 +4,7 @@ AUTO_PORT=3333
 WIRE_BIN=wire
 
 wire:
-	$(WIRE_BIN) github.com/gmidorii/book/server/provider
+	$(WIRE_BIN) github.com/gmidorii/book/server/injector
 
 build: wire
 	go build -o $(BIN)

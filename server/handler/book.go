@@ -5,7 +5,7 @@ import (
 	"net/http"
 
 	"github.com/gmidorii/book/server/form"
-	"github.com/gmidorii/book/server/ingector"
+	"github.com/gmidorii/book/server/injector"
 	"github.com/pkg/errors"
 )
 
@@ -17,7 +17,7 @@ func Books(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 
-	app, err := ingector.InitBookApp()
+	app, err := injector.InitBookApp()
 	if err != nil {
 		log.Println(err)
 		errorMessage(w, http.StatusInternalServerError, "Server Error")

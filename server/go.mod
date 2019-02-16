@@ -4,6 +4,7 @@ require (
 	github.com/go-chi/chi v4.0.1+incompatible
 	github.com/go-playground/locales v0.12.1 // indirect
 	github.com/go-playground/universal-translator v0.16.0 // indirect
+	github.com/google/wire v0.2.1
 	github.com/leodido/go-urn v1.1.0 // indirect
 	github.com/pkg/errors v0.8.1
 	golang.org/x/net v0.0.0-20190213061140-3a22650c66bd // indirect
