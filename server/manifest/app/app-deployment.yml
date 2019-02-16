@@ -3,11 +3,13 @@ kind: Service
 metadata:
   name: bookapp
 spec:
+  type: LoadBalancer
   selector:
     app: bookapp
   ports:
-    - port: 8088
-  clusterIP: None
+    - port: 8888
+      protocol: "TCP"
+      targetPort: 8088
 ---
 apiVersion: apps/v1
 kind: Deployment
