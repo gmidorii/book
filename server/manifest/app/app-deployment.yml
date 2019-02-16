@@ -1,0 +1,31 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: bookapp
+spec:
+  selector:
+    app: bookapp
+  ports:
+    - port: 8088
+  clusterIP: None
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: bookapp
+spec:
+  selector:
+    matchLabels:
+      app: bookapp
+  template:
+    metadata:
+      labels:
+        app: bookapp
+    spec:
+      containers:
+        - name: bookapp
+          image: book-server:latest
+          imagePullPolicy: Never
+          env:
+            - name: BOOK_SER_PORT
+              value: "8088"
