@@ -32,7 +32,16 @@ spec:
               valueFrom:
                 secretKeyRef:
                   name: booksecret
-                  key: mysql.password
+                  key: mysql.rootpassword
+            - name: MYSQL_DATABASE
+              value: "book"
+            - name: MYSQL_USER
+              value: "book_user"
+            - name: MYSQL_PASSWORD
+              valueFrom:
+                secretKeyRef:
+                  name: booksecret
+                  key: mysql.userpassword
           volumeMounts:
             - mountPath: /var/lib/mysql
               name: mysql-persistent-storage
