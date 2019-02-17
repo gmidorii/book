@@ -7,6 +7,7 @@ require (
 	github.com/go-playground/universal-translator v0.16.0 // indirect
 	github.com/go-sql-driver/mysql v1.4.1
 	github.com/google/wire v0.2.1
+	github.com/jmoiron/sqlx v1.2.0
 	github.com/leodido/go-urn v1.1.0 // indirect
 	github.com/pkg/errors v0.8.1
 	github.com/spf13/viper v1.3.1

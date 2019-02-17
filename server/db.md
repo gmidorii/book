@@ -41,9 +41,9 @@ select
   books.isbn,
   books.title,
   books.abstract,
-  author.name,
-  img.title,
-  img.url
+  author.name as author_name,
+  img.title as img_title,
+  img.url as img_url
 from
  (
     select
