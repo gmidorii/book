@@ -3,7 +3,6 @@ package domain
 type Book struct {
 	ID       string
 	Title    string
-	Author   string
 	Abstract string
 	Img      Img
 }
@@ -14,6 +13,6 @@ type Img struct {
 }
 
 type BookRepository interface {
-	Get(ID string) Book
-	GetList(offset, limit int) []Book
+	Get(ID string) (Book, error)
+	GetList(offset, limit int) ([]Book, error)
 }
