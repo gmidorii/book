@@ -3,8 +3,13 @@ package db
 type BookEntity struct {
 	ISBN     string
 	Title    string
-	Author   string
 	Abstract string
+}
+
+type AuthorEntity struct {
+	ID   int
+	Name string
+	ISBN string
 }
 
 type ImgEntity struct {
